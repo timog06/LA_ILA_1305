@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+    
+    <section class="info-box">
+        <h2>Contact Information</h2>
+        <p>Name: Timo Goedertier</p>
+        <p>Email: timo.goedertier@gmail.com</p>
+        <p>Phone: +49 713 31 65</p>
+    </section>
+    
+    <section class="info-box">
+        <h2>Links</h2>
+        <p><a href="https://github.com/timog06" target="_blank">GitHub</a></p>
+        <p><a href="https://www.linkedin.com/in/timog06/" target="_blank">LinkedIn</a></p>
+    </section>
+    
+    <section class="projects-section">
+        <h2>Projects</h2>
+        <button id="add-project-btn">Add Project</button>
+        <div id="projects-container"></div>
+    </section>
+    
+    <div id="project-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <h2>Add New Project</h2>
+            <form id="project-form">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" required>
+                <label for="github-link">GitHub Link:</label>
+                <input type="url" id="github-link" required>
+                <label for="description">Description:</label>
+                <textarea id="description" rows="4" required></textarea>
+                <button type="submit">Add Project</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
