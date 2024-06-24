@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #8CBDB9;
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -19,7 +19,7 @@ header {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #8CBDB9;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -28,7 +28,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #8CBDB9;
 }
 
 .popup {
