@@ -11,10 +11,10 @@
     <header>
         <h1>Portfolio</h1>
         <div class="contact-info">
-            <p><i class="fas fa-envelope"></i><a href="mailto:timo.goedertier@gmail.com">timo.goedertier@gmail.com</a></p>
-            <p><i class="fas fa-phone"></i><a href="tel:+41-79-713-31-65">+41 79 713 31 65</a></p>
-            <p><i class="fa-brands fa-github"></i><a href="https://github.com/timog06" target="_blank">GitHub</a></p>
-            <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/timog06/" target="_blank">LinkedIn</a></p>
+            <p><i class="fas fa-envelope"></i><a href="mailto:timo.goedertier@gmail.com"> timo.goedertier@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i><a href="tel:+41-79-713-31-65"> +41 79 713 31 65</a></p>
+            <p><i class="fa-brands fa-github"></i><a href="https://github.com/timog06" target="_blank"> GitHub</a></p>
+            <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/timog06/" target="_blank"> LinkedIn</a></p>
         </div>
     </header>
     
@@ -36,9 +36,40 @@
         <h2>Projects</h2>
         <button id="add-project-btn">Add Project</button>
         <div id="projects-container"></div>
-        <p>Dieses feature wird bei richtigen hosten einer eigener Webseite funktionieren.</p>
     </section>
     
     <script src="script.js"></script>
+    <script src="temp-newproj.js"></script>
 </body>
+
+<div id="projectPopup" class="popup">
+    <div class="popup-content">
+        <h2>New Project</h2>
+        <form id="newProjectForm">
+            <label for="projectName">Name:</label>
+            <input type="text" id="projectName" name="projectName" required>
+            
+            <label for="projectGithub">GitHub Link:</label>
+            <input type="url" id="projectGithub" name="projectGithub" required>
+            
+            <label for="projectDescription">Kurze Beschreibung:</label>
+            <textarea id="projectDescription" name="projectDescription" required></textarea>
+            
+            <button type="submit">Hinzufügen</button>
+            <button type="button" id="closePopup">Abbrechen</button>
+        </form>
+    </div>
+</div>
+
+<div id="deleteConfirmPopup" class="popup">
+    <div class="popup-content">
+        <h2>Delete Project</h2>
+        <p>Are you sure you want to delete the project?</p>
+        <div class="popup-buttons">
+            <button id="confirmDelete" class="delete-confirm-btn">Delete</button>
+            <button id="cancelDelete" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
 </html>

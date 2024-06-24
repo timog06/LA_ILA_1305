@@ -72,6 +72,16 @@ header .contact-info a:hover {
     padding: 15px;
     background-color: #2a365f;
     border-radius: 5px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease, margin-top 0.5s ease;
+}
+
+#more-about-me-content.show {
+    opacity: 1;
+    max-height: 1000px;
+    margin-top: 15px;
 }
 
 #more-about-me-content p {
@@ -89,4 +99,141 @@ a:hover {
 h2 {
     color: #8CBDB9;
     margin-bottom: 15px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #1e2749;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content label {
+    margin-top: 10px;
+}
+
+.popup-content input, .popup-content textarea {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.popup-content button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button[type="submit"] {
+    background-color: #648FA0;
+    color: white;
+}
+
+.popup-content button[type="button"] {
+    background-color: #ccc;
+}
+
+.project {
+    background-color: #2a365f;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #8CBDB9;
+}
+
+.project p {
+    margin: 10px 0;
+}
+
+.project a {
+    color: #A0D4C2;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff6666;
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.delete-confirm-btn, .cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-confirm-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.delete-confirm-btn:hover {
+    background-color: #ff6666;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.cancel-btn:hover {
+    background-color: #ddd;
 }
